@@ -1,21 +1,53 @@
-# agriculture-risques-analysis
-🌾 Occupational Risk Analysis for Female Agricultural Workers | Data Cleaning, EDA & Predictive Modeling (XGBoost/SHAP)
+# 🌾 Occupational Risk Analysis for Female Agricultural Workers
 
-A data-driven project analyzing health risks and working conditions for women in agriculture.
 
-🔧 Features:
 
-🧹 Advanced data preprocessing (Pandas/KNNImputer)
+Machine learning project predicting occupational accidents among female agricultural workers, comparing Random Forest and optimized XGBoost models.
 
-📊 Interactive visualizations (Seaborn/Plotly)
+## 🚀 Key Features
 
-🤖 ML modeling (XGBoost optimized via GridSearchCV)
+- **Data Pipeline**  
+  Automated cleaning of 80+ variables with Pandas/KNNImputer
+- **Comparative Modeling**  
+  Random Forest vs XGBoost with hyperparameter tuning
+- **Explainability**  
+  SHAP analysis for risk factor interpretation
+- **Safety Recommendations**  
+  PPE guidance based on worker profiles
 
-💡 SHAP explainability for risk factor detection
+## 📊 Model Performance
 
-🎯 Key Outcomes:
-✅ 88% AUC in accident prediction
-✅ Identified top 3 risk determinants
-✅ EPI recommendation system
+### Random Forest
+| Metric          | Score               |
+|-----------------|---------------------|
+| Accuracy        | 0.75               |
+| AUC-ROC         | 0.85               |
+| Recall (Class 1)| 0.33               |
+| Confusion Matrix| [[10 0] [4 2]]     |
 
-#DataScience #OccupationalHealth #MachineLearning
+### Optimized XGBoost (GridSearchCV)
+| Metric          | Score               |
+|-----------------|---------------------|
+| Accuracy        | 0.88               |
+| AUC-ROC         | 0.78               |
+| Recall (Class 1)| 0.60               |
+| Confusion Matrix| [[11 0] [2 3]]     |
+
+**Key Tradeoffs**:
+- XGBoost achieved **17% higher accuracy** but **8% lower AUC-ROC**
+- Better recall (0.60 vs 0.33) for accident prediction (Class 1)
+
+## 🛠️ Tech Stack
+
+```python
+# Data Processing
+Pandas • NumPy • KNNImputer
+
+# Visualization
+Seaborn • Plotly • Matplotlib
+
+# Modeling
+RandomForest • XGBoost (GridSearchCV) • SMOTE
+
+# Explainability
+SHAP • Feature Importance
